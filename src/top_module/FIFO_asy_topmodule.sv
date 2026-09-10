@@ -58,10 +58,10 @@
     .write_full(write_full),.w_addr(w_addr),.r_addr(r_addr),
     .w_data(w_data),. r_data( r_data));
     
-    two_ff_to_write DUT_read_gray_to_write(.CLK_write(CLK_write),.reset_write(reset_write)
+    two_ff_to_write DUT_read_gray_to_write(.CLK_write(CLK_write),.reset_write(reset_after_2ff_write)
     ,.r_gray(r_gray),.r_pointer_2ff_gray(r_pointer_2ff_gray));
     
-     two_ff_to_read DUT_write_gray_to_read(.CLK_read(CLK_read),.reset_read(reset_read),.w_gray(w_gray),
+     two_ff_to_read DUT_write_gray_to_read(.CLK_read(CLK_read),.reset_read(reset_after_2ff_read),.w_gray(w_gray),
      .w_pointer_2ff_gray(w_pointer_2ff_gray));
      
      WRITE_FULL DUT_FULL(.CLK_write(CLK_write),.reset_write(reset_after_2ff_write),.write_request(write_request)
