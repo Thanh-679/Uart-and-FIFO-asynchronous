@@ -1,23 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09/04/2026 12:02:49 AM
-// Design Name: 
-// Module Name: top_module_Rx_Tx
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
+
 `include"uart_config.vh"
 
 
@@ -45,7 +27,7 @@ logic data_out_to_Rx;
 logic ready_for_out_at_stop_bit;
 logic reset_middle_2;
 
-//avoid mestability
+//avoiding mestability
 always_ff @(posedge internal_clk or negedge reset_read) begin
 if(!reset_read) begin
 reset_middle_1<=0;
@@ -56,7 +38,7 @@ reset_middle_2<=reset_middle_1;
 reset_middle_1<=reset_read;
 end
 end
-
+/////
 baud_rate DUT_baud_rate(.internal_clk(internal_clk),.reset_read(reset_middle_2),.Tx_en(Tx_en),.Rx_en(Rx_en));
 
 UART_transmitter DUT_UART_transmitter(.internal_clk(internal_clk),.reset_read(reset_middle_2),.r_data(r_data),.
