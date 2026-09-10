@@ -13,7 +13,7 @@ output logic [`data-1:0] r_data
 );
 //shift 
 localparam RAM_DEPTH =1<<`ADDR_WIDTH;
-logic [`data-1:0] ram_fifo [0:RAM_DEPTH -1];//64 thanh ghi 8-bit xếp liên tiếp
+logic [`data-1:0] ram_fifo [0:RAM_DEPTH -1];//64 register,each has 8-bit 
 
 always_comb begin
 r_data=ram_fifo[r_addr];
