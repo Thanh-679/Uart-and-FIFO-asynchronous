@@ -88,7 +88,9 @@ so that full can be updated on the next CLK_write edge to determine whether the 
 <img width="1163" height="257" alt="image" src="https://github.com/user-attachments/assets/1567aad6-f73d-42ee-aa11-dd2ec11d2023" />
 //////
 /////
-<img width="1898" height="605" alt="image" src="https://github.com/user-attachments/assets/9998097e-6fab-4948-b46f-deb42cf191cd" />
+FINAL-process
+WRITE REQUEST AND DATA FROM OTHER DEVICES-UART TAKE THE DATA AND OUTPUT 
+<img width="1888" height="498" alt="image" src="https://github.com/user-attachments/assets/f88a3f44-06a3-4921-acc8-9116a3dda706" />
 
 
 
